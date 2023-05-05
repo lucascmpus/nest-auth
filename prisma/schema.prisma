@@ -17,4 +17,15 @@ model User {
   password String
 
   name String
-} 
+}
+
+model Customer {
+  id     String @id @default(cuid())
+
+  name   String
+  gender String
+  address String
+
+  created_at DateTime @default(now())
+}
+
